@@ -1,0 +1,18 @@
+graph LR
+    Ingest[Ingest job] --> Storage[(Document storage)]
+    Storage --> OCR[OCR job]
+    Storage --> Parse[Statement parser job]
+    OCR --> Standardize[Standardize job]
+    Parse --> Standardize
+    Standardize --> Match[Matching job]
+    Match --> Validate[Validation job]
+    Validate --> DW[(Reconciliation warehouse)]
+    DW --> Dashboard[Looker dashboard]
+    DW --> Sheets[Manual review sheet]
+    Validate --> Notify[Chat notification]
+    Orchestrator[Workflow orchestrator] --> Ingest
+    Orchestrator --> OCR
+    Orchestrator --> Parse
+    Orchestrator --> Standardize
+    Orchestrator --> Match
+    Orchestrator --> Validate

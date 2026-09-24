@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200, initial-scale=1.0">
+  <title>Document Intelligence — Reconciliation Dashboard Mockup</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      padding: 32px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 24px 32px;
+    }
+    header h1 { margin: 0; font-size: 22px; font-weight: 600; }
+    header p { margin: 6px 0 0; opacity: 0.8; font-size: 14px; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding: 24px 32px;
+      background: #f1f5f9;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .card .label { font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+    .card .value { font-size: 26px; font-weight: 700; margin-top: 6px; color: #0f172a; }
+    .card .delta { font-size: 13px; margin-top: 4px; color: #16a34a; }
+    .section { padding: 24px 32px; }
+    .section h2 { margin: 0 0 16px; font-size: 16px; font-weight: 600; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td { text-align: left; padding: 12px; border-bottom: 1px solid #e2e8f0; }
+    th { color: #64748b; font-weight: 500; background: #f8fafc; }
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+    .matched { background: #dcfce7; color: #166534; }
+    .review { background: #fef3c7; color: #92400e; }
+    .manual { background: #fee2e2; color: #991b1b; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Document Intelligence & Reconciliation</h1>
+      <p>Daily run — September 24, 2026</p>
+    </header>
+
+    <div class="stats">
+      <div class="card">
+        <div class="label">Vouchers processed</div>
+        <div class="value">1,247</div>
+        <div class="delta">+8% vs yesterday</div>
+      </div>
+      <div class="card">
+        <div class="label">Auto-matched</div>
+        <div class="value">1,089</div>
+        <div class="delta">87.3% match rate</div>
+      </div>
+      <div class="card">
+        <div class="label">Pending review</div>
+        <div class="value">98</div>
+        <div class="delta">7.9% of total</div>
+      </div>
+      <div class="card">
+        <div class="label">Manual unmatched</div>
+        <div class="value">60</div>
+        <div class="delta">Requires operator</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Recent reconciliations</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Voucher</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Reference</th>
+            <th>Status</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>V-20260924-001</td>
+            <td>COP 1,250,000</td>
+            <td>2026-09-24</td>
+            <td>REF-88421</td>
+            <td><span class="badge matched">Auto-matched</span></td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>V-20260924-042</td>
+            <td>COP 890,000</td>
+            <td>2026-09-24</td>
+            <td>REF-91204</td>
+            <td><span class="badge review">Needs review</span></td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>V-20260924-103</td>
+            <td>COP 2,100,000</td>
+            <td>2026-09-23</td>
+            <td>—</td>
+            <td><span class="badge manual">Manual</span></td>
+            <td>Low</td>
+          </tr>
+          <tr>
+            <td>V-20260924-118</td>
+            <td>COP 450,000</td>
+            <td>2026-09-24</td>
+            <td>REF-88421</td>
+            <td><span class="badge matched">Auto-matched</span></td>
+            <td>High</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
