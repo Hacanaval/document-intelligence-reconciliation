@@ -80,7 +80,7 @@ graph LR
 
 ## Key results
 
-- More than 200 thousand historical statement rows were used to validate the pipeline under load.
+- More than hundreds of thousands of historical statement rows were used to validate the pipeline under load.
 - Most matches are now automatic; only a small fraction goes to manual review.
 - Delta-check across three layers (data warehouse, input storage, archive) avoids repeated OCR calls, cutting model usage.
 - Daily runs are idempotent, so finance can reprocess a day safely without duplicate rows.
